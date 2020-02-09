@@ -1,0 +1,16 @@
+.Header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  background: rgba(10, 38, 53, 0.4);
+  color: white;
+
+  span {
+    margin-right: 30px;
+    text-decoration: none;
+  }
+
+  span:hover {
+    color: green;
+  }
+}
