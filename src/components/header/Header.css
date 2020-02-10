@@ -20,7 +20,7 @@
   }
 
   span {
-    font-size: 22px;
+    font-size: 18px;
     transition-property: font-size;
     transition-duration: 0.3s;
   }
