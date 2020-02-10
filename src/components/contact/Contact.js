@@ -1,7 +1,10 @@
 import React from 'react';
+import styles from './Contact.css';
 
 const Contact = () => (
-  <div>Contact Mountain High</div>
+  <section className={styles.Contact}>
+
+  </section>
 );
 
 export default Contact;

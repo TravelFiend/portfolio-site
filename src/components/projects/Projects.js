@@ -1,7 +1,10 @@
 import React from 'react';
+import styles from './Projects.css';
 
 const Projects = () => (
-  <div>Projects Whale Blubber</div>
+  <section className={styles.Projects}>
+
+  </section>
 );
 
 export default Projects;
