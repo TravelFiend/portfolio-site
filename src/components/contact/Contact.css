@@ -1,5 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial|Muli:400,600|Poppins|Cairo&display=swap');
+
 .Contact {
+  display: flex;
   background: #CAD2C5;
   height: 100vh;
   width: 100vw;
+
+  div {
+    margin-top: 20vh;
+    margin-left: 10%;
+    height: 75vh;
+    width: 3px;
+    background: #84A98C;
+
+  }
+}
+
+.Icons, .Links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 30%;
+  height: 85vh;
+  padding-top: 15vh;
+
+  img {
+    width: 40px;
+  }
+}
+
+.Links {
+  align-items: flex-start;
+  padding-left: 100px;
+
+  a {
+    text-decoration: none;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    color: #2F3E46;
+  }
+
+  a:hover {
+    color: #52796F;
+  }
 }

@@ -3,7 +3,7 @@
   justify-content: flex-end;
   align-items: center;
   width: 100vw;
-  background: rgba(10, 38, 53, 0.7);
+  background: #2F3E46;
   color: white;
   height: 15vh;
   position: absolute;
@@ -27,6 +27,6 @@
 
   span:hover {
     font-size: 26px;
-    color: #52796F;
+    color: #84A98C;
   }
 }
