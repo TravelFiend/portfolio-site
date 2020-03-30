@@ -1,5 +1,39 @@
 .About {
   background: #CAD2C5;
-  height: 100vh;
+  height: 85vh;
   width: 100vw;
+}
+
+.mask {
+  height: 100%;
+  width: 100%;
+  background-color: #52796F;
+  opacity: 0.6;
+}
+
+.Img1 {
+  height: 85vh;
+  padding-top: 15vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../../assets/bosnia.jpg');
+}
+
+.Img2 {
+  height: 65vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../../assets/camping.jpg');
+}
+
+.Img3 {
+  height: 75vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

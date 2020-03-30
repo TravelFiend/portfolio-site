@@ -45,3 +45,23 @@
     color: #52796F;
   }
 }
+
+@media screen and (max-width: 700px){
+  .Contact {
+    div {
+      display: none;
+    }
+  }
+
+  .Icons {
+    width: 20%;
+  }
+
+  .Links {
+    padding-left: 10px;
+
+    a {
+      font-size: 18px;
+    }
+  }
+}
