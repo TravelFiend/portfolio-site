@@ -4,10 +4,13 @@
   width: 100vw;
 }
 
-.mask {
+.Mask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
-  background-color: #52796F;
+  background-color: #CAD2C5;
   opacity: 0.6;
 }
 
@@ -36,4 +39,24 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.Info {
+  height: 40vh;
+  padding: 80px 50px;
+  text-align: center;
+  background: #CAD2C5;
+  color: #2F3E46;
+  font-size: 1.2em;
+}
+
+
+.poop {
+  position: relative;
+  bottom: 80%;
+  text-align: end;
+  padding-right: 10%;
+  color: #52796F;
+  font-size: 40px;
+  opacity: 1;
 }

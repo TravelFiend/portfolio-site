@@ -3,25 +3,28 @@ import styles from './About.css';
 
 const About = () => {
   return (
-    <div className={styles.About}>
-      <div className={styles.Img1}>
-        <div className={styles.mask}>Some words and stuff</div>
-      </div>
+    <article className={styles.About}>
+      <section className={styles.Img1}>
+        <div className={styles.Mask}></div>
+        <div className={styles.poop}>ndbksdjfbksdfnb</div>
+      </section>
 
-      <div>Some stuff about me and stuff g</div>
+      <div className={styles.Info}>Some stuff about me and stuff g</div>
 
-      <div className={styles.Img2}>
-        <div className={styles.mask}>Some words and stuff</div>
-      </div>
+      <section className={styles.Img2}>
+        <div className={styles.Mask}></div>
+        <div className={styles.poop}>sdvsdfbsdbsdb</div>
+      </section>
 
-      <div>Some stuff about me and stuff g</div>
+      <div className={styles.Info}>Some stuff about me and stuff g</div>
 
-      <div className={styles.Img3}>
-        <div className={styles.mask}>Some words and stuff</div>
-      </div>
+      <section className={styles.Img3}>
+        <div className={styles.Mask}></div>
+        <div className={styles.poop}>hkhjkjhv</div>
+      </section>
 
-      <div>Some stuff about me and stuff g</div>
-    </div>
+      <div className={styles.Info}>Some stuff about me and stuff g</div>
+    </article>
   );
 };
 
