@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './Projects.css';
 
 const Projects = () => (
-  <section className={styles.Projects}>
+  <article className={styles.Projects}>
 
-  </section>
+  </article>
 );
 
 export default Projects;
