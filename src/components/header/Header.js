@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.css';
+import MGLogo from '../../assets/MGLogo.png';
 
 const Header = () => (
   <header className={styles.Header}>
+    <img src={MGLogo} />
     <nav>
       <Link to='/'>
         <span>Home</span>

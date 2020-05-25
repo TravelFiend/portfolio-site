@@ -1,6 +1,6 @@
 .Header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   width: 100vw;
   background: #2F3E46;
@@ -29,5 +29,10 @@
   span:hover {
     font-size: 26px;
     color: #84A98C;
+  }
+
+  img {
+    height: 80%;
+    margin-left: 3%;
   }
 }
