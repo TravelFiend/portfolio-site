@@ -1,0 +1,44 @@
+.ProjectItem {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30vh 5vw;
+  height: 60vh;
+  width: 90vw;
+
+  p {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  img {
+    max-height: 60vh;
+    max-width: 70vw;
+    margin-right: 2vw;
+    border-radius: 5px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    li {
+      border-radius: 5;
+
+      img {
+        width: 16vw;
+      }
+
+      img:hover {
+
+      }
+    }
+  }
+}

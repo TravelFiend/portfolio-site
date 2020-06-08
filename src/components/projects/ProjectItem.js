@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './ProjectItem.css';
 import PropTypes from 'prop-types';
 
-const ProjectItem = ({ projectName, picList, displayedPic }) => {
-  const snapshots = picList.map((onePic, i) => (
+const ProjectItem = ({ projectName, imageList }) => {
+  const [imgIndex, setImgIndex] = useState(0);
+
+  const snapshots = imageList.map((onePic, i) => (
     <li key={i}>
-      <img src={onePic}/>
+      <img src={onePic} onClick={() => setImgIndex(i)} />
     </li>
   ));
 
@@ -13,7 +15,7 @@ const ProjectItem = ({ projectName, picList, displayedPic }) => {
     <section className={styles.ProjectItem}>
       <div>
         <p>{projectName}</p>
-        <img src={displayedPic}/>
+        <img src={imageList[imgIndex]}/>
       </div>
 
       <ul>{snapshots}</ul>
@@ -23,8 +25,7 @@ const ProjectItem = ({ projectName, picList, displayedPic }) => {
 
 ProjectItem.propTypes = {
   projectName: PropTypes.string.isRequired,
-  picList: PropTypes.array.isRequired,
-  displayedPic: PropTypes.bool
+  imageList: PropTypes.array.isRequired
 };
 
 export default ProjectItem;
