@@ -27,22 +27,28 @@ import offbeatAbout from '../assets/offbeatAbout.png';
 
 const projectPics = [
   {
+    projectName: 'NMConnect',
+    mobile: true,
+    imageList: [nmHome, nmButtons, nmCommState, nmRecovery, nmCorona, nmVideo, nmAudio]
+  }, {
     projectName: 'Columns and Rogues',
+    mobile: false,
     imageList: [columnsHome, columnsLogin, columnsGame, columnsAbout]
   }, {
     projectName: 'CovrLettr',
+    mobile: false,
     imageList: [covrLogin, covrForm, covrLetter, covrAbout]
   }, {
     projectName: 'KIT (Keep In Touch)',
+    mobile: false,
     imageList: [kitHome, kitSettings, kitList]
   }, {
-    projectName: 'NMConnect',
-    imageList: [nmHome, nmButtons, nmCommState, nmRecovery, nmCorona, nmVideo, nmAudio]
-  }, {
     projectName: 'Notable Notes',
+    mobile: false,
     imageList: [notableHome, notableLogin, notableNotebooks, notableEntries]
   }, {
     projectName: 'Offbeat',
+    mobile: false,
     imageList: [offbeatHome, offbeatLogin, offbeatRecordings, offbeatAbout]
   }
 ];

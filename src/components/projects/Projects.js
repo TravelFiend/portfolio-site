@@ -4,16 +4,32 @@ import ProjectItem from './ProjectItem';
 import projectPicList from '../../data/projectPicList';
 
 const Projects = () => {
-  const projectItems = projectPicList.map((item, i) => (
-    <li key={i}>
-      <ProjectItem projectName={item.projectName} imageList={item.imageList} />
+  const navButtons = projectPicList.map((item, i) => {
+    const val = `#${i}`;
+    return (
+      <a key={item.projectName} href={val}>
+        <li>
+          <p>{item.projectName}</p>
+        </li>
+      </a>
+    );
+  });
+
+  const projectItems = projectPicList.map((item, j) => (
+    <li key={j} id={j}>
+      <ProjectItem mobile={item.mobile} imageList={item.imageList} />
     </li>
   ));
 
   return (
-    <ul className={styles.Projects}>
-      {projectItems}
-    </ul>
+    <div className={styles.Container}>
+      <ul>
+        {navButtons}
+      </ul>
+      <ul className={styles.SecondList}>
+        {projectItems}
+      </ul>
+    </div>
   );
 };
 

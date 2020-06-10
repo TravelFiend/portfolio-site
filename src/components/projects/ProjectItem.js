@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './ProjectItem.css';
 import PropTypes from 'prop-types';
 
-const ProjectItem = ({ projectName, imageList }) => {
+const ProjectItem = ({ mobile, imageList }) => {
   const [imgIndex, setImgIndex] = useState(0);
 
   const snapshots = imageList.map((onePic, i) => (
@@ -14,17 +14,16 @@ const ProjectItem = ({ projectName, imageList }) => {
   return (
     <section className={styles.ProjectItem}>
       <div>
-        <p>{projectName}</p>
         <img src={imageList[imgIndex]}/>
       </div>
 
-      <ul>{snapshots}</ul>
+      {mobile ? <ul className={styles.MobilePreview}>{snapshots}</ul> : <ul>{snapshots}</ul>}
     </section>
   );
 };
 
 ProjectItem.propTypes = {
-  projectName: PropTypes.string.isRequired,
+  mobile: PropTypes.bool.isRequired,
   imageList: PropTypes.array.isRequired
 };
 
