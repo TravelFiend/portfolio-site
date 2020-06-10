@@ -22,12 +22,11 @@
 
   span {
     font-size: 18px;
-    transition-property: font-size;
-    transition-duration: 0.3s;
+    transition-property: color;
+    transition-duration: 0.4s;
   }
 
   span:hover {
-    font-size: 26px;
     color: #84A98C;
   }
 

@@ -27,26 +27,38 @@ import offbeatAbout from '../assets/offbeatAbout.png';
 
 const projectPics = [
   {
+    projectLink: '',
+    repoLink: '',
     projectName: 'NMConnect',
     mobile: true,
     imageList: [nmHome, nmButtons, nmCommState, nmRecovery, nmCorona, nmVideo, nmAudio]
   }, {
+    projectLink: 'https://columns-and-rogues.herokuapp.com/',
+    repoLink: '',
     projectName: 'Columns and Rogues',
     mobile: false,
     imageList: [columnsHome, columnsLogin, columnsGame, columnsAbout]
   }, {
+    projectLink: '',
+    repoLink: 'https://github.com/covrLettr',
     projectName: 'CovrLettr',
     mobile: false,
     imageList: [covrLogin, covrForm, covrLetter, covrAbout]
   }, {
+    projectLink: 'https://friendlier-staging.netlify.app/about',
+    repoLink: '',
     projectName: 'KIT (Keep In Touch)',
     mobile: false,
     imageList: [kitHome, kitSettings, kitList]
   }, {
+    projectLink: '',
+    repoLink: '',
     projectName: 'Notable Notes',
     mobile: false,
     imageList: [notableHome, notableLogin, notableNotebooks, notableEntries]
   }, {
+    projectLink: 'https://travelfiend.github.io/offbeat/',
+    repoLink: '',
     projectName: 'Offbeat',
     mobile: false,
     imageList: [offbeatHome, offbeatLogin, offbeatRecordings, offbeatAbout]
