@@ -21,10 +21,10 @@ const ProjectItem = ({ site, code, mobile, imageList }) => {
             <a href={code}> See the code</a>
           </p>
         </div>
-        <img src={imageList[imgIndex]}/>
+        <img className={mobile && styles.MobileMain} src={imageList[imgIndex]}/>
       </div>
 
-      {mobile ? <ul className={styles.MobilePreview}>{snapshots}</ul> : <ul>{snapshots}</ul>}
+      <ul className={mobile && styles.MobilePreview}>{snapshots}</ul>
     </section>
   );
 };

@@ -1,6 +1,6 @@
 .ProjectItem {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 5vw;
   height: 60vh;
   min-width: 90vw;
@@ -11,6 +11,11 @@
     max-height: 55vh;
     max-width: 70vw;
     border-radius: 5px;
+  }
+
+  .MobileMain {
+    max-width: 220px;
+    align-self: center;
   }
 
   div {
@@ -51,6 +56,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-left: 2vw;
+    max-width: 15%;
 
     li {
       display: flex;
@@ -66,9 +72,11 @@
   }
 
   .MobilePreview {
+    margin-left: 15vh;
 
     li {
       height: 33%;
+      margin: 0 10px;
     }
   }
 }

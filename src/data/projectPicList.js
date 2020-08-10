@@ -51,8 +51,8 @@ const projectPics = [
     mobile: false,
     imageList: [kitHome, kitSettings, kitList]
   }, {
-    projectLink: '',
-    repoLink: '',
+    projectLink: 'https://note-noter.herokuapp.com/',
+    repoLink: 'https://github.com/TravelFiend/full-stack-with-mongo',
     projectName: 'Notable Notes',
     mobile: false,
     imageList: [notableHome, notableLogin, notableNotebooks, notableEntries]

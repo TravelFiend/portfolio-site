@@ -9,7 +9,7 @@ const Projects = () => {
     return (
       <a key={item.projectName} href={val}>
         <li>
-          <p>{item.projectName}</p>
+          <span>{item.projectName}</span>
         </li>
       </a>
     );
