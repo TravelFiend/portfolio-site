@@ -22,6 +22,10 @@ const Header = () => (
       <Link to='/contact'>
         <span>Contact</span>
       </Link>
+
+      <Link to='/resume'>
+        <span>Printable Resume</span>
+      </Link>
     </nav>
   </header>
 );
