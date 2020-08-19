@@ -17,7 +17,7 @@ const Projects = () => {
 
   const projectItems = projectPicList.map((item, j) => (
     <li key={j} id={j}>
-      <ProjectItem site={item.projectLink} code={item.repoLink} mobile={item.mobile} imageList={item.imageList} />
+      <ProjectItem site={item.liveLink} code={item.repoLink} about={item.about} projectName={item.projectName} mobile={item.mobile} imageList={item.imageList} />
     </li>
   ));
 

@@ -5,7 +5,7 @@ import Home from './home/Home';
 import About from './about/About';
 import Projects from './projects/Projects';
 import Contact from './contact/Contact';
-import Resume from './resume/Resume';
+import Resume from './resume/ResumePage';
 
 export default function App() {
   return (
