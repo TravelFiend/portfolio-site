@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './Resume.css';
-import MGLogo from '../../assets/MGLogo.png';
+import MGLogo from '../../../public/assets/MGLogo.png';
 import { techData, contactData, projectData } from '../../data/resumeData';
 
 class Resume extends Component {

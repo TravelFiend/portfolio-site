@@ -1,29 +1,29 @@
-import columnsHome from '../assets/columnsHome.png';
-import columnsLogin from '../assets/columnsLogin.png';
-import columnsGame from '../assets/columnsGame.png';
-import columnsAbout from '../assets/columnsAbout.png';
-import covrLogin from '../assets/covrLogin.png';
-import covrForm from '../assets/covrForm.png';
-import covrLetter from '../assets/covrLetter.png';
-import covrAbout from '../assets/covrAbout.png';
-import kitHome from '../assets/kitHome.png';
-import kitSettings from '../assets/kitSettings.png';
-import kitList from '../assets/kitList.png';
-import nmHome from '../assets/nmHome.png';
-import nmButtons from '../assets/nmButtons.png';
-import nmCommState from '../assets/nmCommState.png';
-import nmRecovery from '../assets/nmRecovery.png';
-import nmCorona from '../assets/nmCorona.png';
-import nmVideo from '../assets/nmVideo.png';
-import nmAudio from '../assets/nmAudio.png';
-import notableHome from '../assets/notableHome.png';
-import notableLogin from '../assets/notableLogin.png';
-import notableNotebooks from '../assets/notableNotebooks.png';
-import notableEntries from '../assets/notableEntries.png';
-import offbeatHome from '../assets/offbeatHome.png';
-import offbeatLogin from '../assets/offbeatLogin.png';
-import offbeatRecordings from '../assets/offbeatRecordings.png';
-import offbeatAbout from '../assets/offbeatAbout.png';
+import columnsHome from '../../public/assets/columnsHome.png';
+import columnsLogin from '../../public/assets/columnsLogin.png';
+import columnsGame from '../../public/assets/columnsGame.png';
+import columnsAbout from '../../public/assets/columnsAbout.png';
+import covrLogin from '../../public/assets/covrLogin.png';
+import covrForm from '../../public/assets/covrForm.png';
+import covrLetter from '../../public/assets/covrLetter.png';
+import covrAbout from '../../public/assets/covrAbout.png';
+import kitHome from '../../public/assets/kitHome.png';
+import kitSettings from '../../public/assets/kitSettings.png';
+import kitList from '../../public/assets/kitList.png';
+import nmHome from '../../public/assets/nmHome.png';
+import nmButtons from '../../public/assets/nmButtons.png';
+import nmCommState from '../../public/assets/nmCommState.png';
+import nmRecovery from '../../public/assets/nmRecovery.png';
+import nmCorona from '../../public/assets/nmCorona.png';
+import nmVideo from '../../public/assets/nmVideo.png';
+import nmAudio from '../../public/assets/nmAudio.png';
+import notableHome from '../../public/assets/notableHome.png';
+import notableLogin from '../../public/assets/notableLogin.png';
+import notableNotebooks from '../../public/assets/notableNotebooks.png';
+import notableEntries from '../../public/assets/notableEntries.png';
+import offbeatHome from '../../public/assets/offbeatHome.png';
+import offbeatLogin from '../../public/assets/offbeatLogin.png';
+import offbeatRecordings from '../../public/assets/offbeatRecordings.png';
+import offbeatAbout from '../../public/assets/offbeatAbout.png';
 
 const projectPics = [
   {
@@ -46,7 +46,7 @@ const projectPics = [
     imageList: [columnsHome, columnsLogin, columnsGame, columnsAbout]
   }, {
     projectName: 'CovrLettr',
-    liveLink: '',
+    liveLink: 'https://covrlettr.netlify.app/userauth',
     repoLink: 'https://github.com/covrLettr',
     mobile: false,
     about: `HTML - CSS - Vanilla JavaScript - MongoDB - Mongoose - Express - Jest - Node.js
@@ -60,7 +60,7 @@ const projectPics = [
     mobile: false,
     about: `React - Redux - Express - Node.js - MongoDB - Mongoose - Passport
     
-    KIT is a tool for setting and tracking communication goals. Users enter contacts and select how frequently they'd like to contact each person.  The app will then send push notification reminders based on user settings. Contacts will appear in different colors depending on how close they are to the contact deadline previously set by the user.  Incorporated DateFNs library for time oriented state management and Cron Job for regular updating.  This project was completed with a group of 4 developers in one week.  I dipped my toes into a little bit of everytihng for this project.`,
+    KIT is a tool for setting and tracking communication goals. Users enter contacts and select how frequently they'd like to contact each person.  The app will then send push notification reminders based on user settings. Contacts will appear in different colors depending on how close they are to the contact deadline previously set by the user.  Incorporated DateFNs library for time oriented state management and Cron Job for regular updating.  This project was completed with a group of 4 developers in one week.  I dipped my toes into a little bit of everything for this project.`,
     imageList: [kitHome, kitSettings, kitList]
   }, {
     projectName: 'Notable Notes',

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.css';
-import MGLogo from '../../assets/MGLogo.png';
+import MGLogo from '../../../public/assets/MGLogo.png';
+import MGColorResume from '../../../public/assets/MGColorResume.pdf';
 
 const Header = () => (
   <header className={styles.Header}>
@@ -11,21 +12,19 @@ const Header = () => (
         <span>Home</span>
       </Link>
 
-      <Link to='/projects'>
-        <span>Projects</span>
-      </Link>
-
       <Link to='/about'>
         <span>About</span>
+      </Link>
+
+      <Link to='/projects'>
+        <span>Projects</span>
       </Link>
 
       <Link to='/contact'>
         <span>Contact</span>
       </Link>
 
-      <Link to='/resume'>
-        <span>Printable Resume</span>
-      </Link>
+      <a href={MGColorResume} target='_blank' rel='noopener noreferrer'>Printable Resume</a>
     </nav>
   </header>
 );

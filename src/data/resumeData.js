@@ -1,7 +1,7 @@
-import email from '../assets/email-icon1.png';
-import phone from '../assets/phone-icon1.png';
-import linkedIn from '../assets/linkedin-icon1.png';
-import github from '../assets/github-icon1.png';
+import email from '../../public/assets/email-icon1.png';
+import phone from '../../public/assets/phone-icon1.png';
+import linkedIn from '../../public/assets/linkedin-icon1.png';
+import github from '../../public/assets/github-icon1.png';
 
 export const techData = [{
   sectionTitle: 'Languages',

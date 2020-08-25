@@ -2,33 +2,84 @@
   background: #CAD2C5;
   height: 85vh;
   width: 100%;
+
+  section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  section:nth-of-type(2) {
+    height: 65vh;
+    padding-top: 0;
+    background-image: url('../../../public/assets/camping.jpg');
+
+    div:last-child {
+      margin-left: 15%;
+      width: 70%;
+      white-space: pre-wrap;
+      position: relative;
+      bottom: 60%;
+      text-align: center;
+
+      p {
+        line-height: 1.6em;
+        text-align-last: end;
+        font-size: 2em;
+        color: #2F3E46;
+        
+        span {
+          color: white;
+          font-size: 0.7em;
+        }
+      }
+    }
+  }
+
+  section:last-child {
+    box-shadow: 0 5px 15px #2F3E46;
+    height: 75vh;
+    background-image: url('../../../public/assets/Croatia.jpg');
+
+    div:last-child {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      position: relative;
+      bottom: 80%;
+
+      img {
+        border: 10px solid #2F3E46;
+        border-radius: 100%;
+        width: 25%;
+      }
+    }
+  }
 }
 
-.Mask {
+.Mask, .LastMask {
   height: 100%;
   width: 100%;
   background-color: #CAD2C5;
   opacity: 0.6;
 }
 
-.Img1, .Img2, .Img3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.LastMask {
+  background-color: #ebf1e8;
 }
 
 .Img1 {
   height: 85vh;
   padding-top: 15vh;
-  background-image: url('../../assets/bosnia.jpg');
+  background-image: url('../../../public/assets/bosnia.jpg');
 
   img {
     width: 100%;
     height: 100%;
   }
 
-  .iconRow {
+  div {
     position: relative;
     margin: 0;
     padding: 0;
@@ -42,7 +93,7 @@
     justify-content: flex-end;
     flex-wrap: wrap;
 
-    .icon {
+    div {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -54,35 +105,26 @@
         height: 50%;
         width: 50%;
         margin: 1%;
+        filter: drop-shadow(5px 5px 5px #2F3E46);
       }
 
       p {
         text-align: center;
         font-size: 0.35em;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         margin: 10%;
       }
     }
   }
 }
 
-.Img2 {
-  height: 65vh;
-  padding-top: 0;
-  background-image: url('../../assets/camping.jpg');
-}
-
-.Img3 {
-  height: 75vh;
-}
-
 .Info {
   height: 40vh;
   padding: 80px 15%;
-  text-align: center;
+  display: flex;
+  align-items: center;
   background: #CAD2C5;
   color: #2F3E46;
   line-height: 2.5em;
   font-size: 1.2em;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
 }
