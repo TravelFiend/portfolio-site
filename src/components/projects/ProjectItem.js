@@ -35,18 +35,30 @@ const ProjectItem = ({ site, code, projectName, about, mobile, imageList }) => {
         {about}
       </div>}
       <section className={!showAbout ? styles.ProjectItem : styles.Hidden}>
-        <div>
-          <div>
-            <p onClick={() => setShowAbout(true)}>About</p>
-            ||
-            <a href={site}>{projectName === 'NMConnect' ? 'Apple Store' : 'Check it out'}</a>
-            ||
-            <a href={code}>{projectName === 'NMConnect' ? 'Google Play Store' : 'See the code'}</a>
-          </div>
-          <img className={mobile ? styles.MobileMain : undefined} src={imageList[imgIndex]}/>
+        <div className={!mobile ? styles.LeftArrow : styles.HiddenArrow}>
+          <div></div>
+          <div></div>
         </div>
 
-        <ul className={mobile ? styles.MobilePreview : undefined}>{snapshots}</ul>
+        <div className={styles.ProjectContent}>
+          <div>
+            <div>
+              <p onClick={() => setShowAbout(true)}>About</p>
+              ||
+              <a href={site}>{projectName === 'NMConnect' ? 'Apple Store' : 'Check it out'}</a>
+              ||
+              <a href={code}>{projectName === 'NMConnect' ? 'Google Play Store' : 'See the code'}</a>
+            </div>
+            <img className={mobile ? styles.MobileMain : undefined} src={imageList[imgIndex]}/>
+          </div>
+
+          <ul className={mobile ? styles.MobilePreview : undefined}>{snapshots}</ul>
+        </div>
+        
+        <div className={projectName !== 'Offbeat' ? styles.RightArrow : styles.HiddenArrow}>
+          <div></div>
+          <div></div>
+        </div>
       </section>
     </>
   );

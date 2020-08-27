@@ -17,7 +17,7 @@ const Header = () => (
       </Link>
 
       <Link to='/projects'>
-        <span>Projects</span>
+        <span>Work</span>
       </Link>
 
       <Link to='/contact'>

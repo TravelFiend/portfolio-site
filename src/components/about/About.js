@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './About.css';
 import halfCover from '../../../public/assets/half.png';
 import html from '../../../public/assets/html5.png';
@@ -22,6 +22,15 @@ import bees from '../../../public/assets/bees.jpg';
 import TravisCI from '../../../public/assets/TravisCI.png';
 
 const About = () => {
+  const ref = useRef();
+
+  const handleClick = () => {
+    ref.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  };
+
   const icon = (image, techName) => (
     <div>
       <img src={image} />
@@ -33,7 +42,7 @@ const About = () => {
     <article className={styles.About}>
       <section className={styles.Img1}>
         <img src={halfCover} />
-        <div>
+        <div className={styles.Divs}>
           {icon(html, 'HTML5')}
           {icon(css, 'CSS')}
           {icon(js, 'JavaScript')}
@@ -41,7 +50,7 @@ const About = () => {
           {icon(github, 'github')}
         </div>
 
-        <div>
+        <div className={styles.Divs}>
           <div>
             <img style={{ width: '96%' }} src={node} />
             <p>nodeJS</p>
@@ -51,14 +60,14 @@ const About = () => {
           {icon(heroku, 'Heroku')}
         </div>
 
-        <div>
+        <div className={styles.Divs}>
           {icon(jest, 'Jest')}
           {icon(qunit, 'QUnit')}
           {icon(postman, 'Postman')}
           {icon(TravisCI, 'TravisCI')}
         </div>
 
-        <div>
+        <div className={styles.Divs}>
           <div>
             <img style={{ width: '87%' }} src={express} />
             <p>Express</p>
@@ -69,15 +78,22 @@ const About = () => {
             <p>mongoose</p>
           </div>
         </div>
+
+        <div onClick={handleClick} className={styles.Round}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </section>
 
-      <div className={styles.Info}>
+      <div ref={ref} className={styles.Info}>
         <p>With a BFA in printmaking from Ohio University and a decade-long career in logistics, I am able to approach problems from multiple perspectives to get them solved in creative ways.  While practicing fine arts has opened the door to thinking outside the box, my time in logistics has taught me the importance of organization.  For me, these two skills have had the greatest impact on my code, and it&apos;s paved the road to a deep addiction to software development.</p>
       </div>
 
       <section>
         <div className={styles.Mask}></div>
-        <div><p>“Travel is rich with learning opportunities, and the ultimate souvenir is a broader perspective.”<span>-Rick Steves</span></p></div>
+        <div><p>“Travel is rich with learning opportunities, and the ultimate souvenir is a broader perspective.” <span>-Rick Steves</span></p></div>
       </section>
 
       <div className={styles.Info}>
