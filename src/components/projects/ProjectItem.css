@@ -134,6 +134,13 @@
   }
 }
 
+.LeftArrow:hover, .RightArrow:hover {
+  
+  div {
+    background: #2F3E46;
+  }
+}
+
 .LeftArrow {
   top: 40%;
 
