@@ -20,9 +20,9 @@ module.exports = {
     new Dotenv({
       systemvars: true
     }),
-    new CopyPlugin([
-      { from: 'public' },
-    ])
+    new CopyPlugin({
+      patterns: [{ from: 'public' }]
+    })
   ],
   module: {
     rules: [
@@ -65,7 +65,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpeg|jpg|png|svg)$/,
+        test: /\.(jpeg|jpg|png|svg|pdf)$/,
         use: {
           loader: 'url-loader',
           options: { limit: 1000 },
