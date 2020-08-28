@@ -1,5 +1,46 @@
-.Projects {
-  background: #CAD2C5;
+.Container {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
+  background: #52796F;
+
+  ul:first-child {
+    display: flex;
+    margin-top: 20vh;
+    width: 100vw;
+    position: fixed;
+    justify-content: space-evenly;
+
+    p {
+      text-decoration: none;
+      background: #52796F;
+      padding: 1.2em;
+      border: 2px solid #2F3E46;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #CAD2C5;
+      box-shadow: inset 0.2em 0.2em 10px #CAD2C5,
+                  inset -0.2em -0.2em 10px #2F3E46,
+                        0.2em 0.2em 5px #2F3E46;
+    }
+
+    p:hover {
+      color: #2F3E46;
+    }
+
+    p:active {
+      box-shadow: inset -0.2em -0.2em 10px #CAD2C5,
+                  inset 0.2em 0.2em 10px #2F3E46,
+                        0.2em 0.2em 5px #2F3E46;
+    }
+  }
+
+  .SecondList {
+    margin-top: 25vh;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
 }

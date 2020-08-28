@@ -1,0 +1,178 @@
+
+.About {
+  flex-direction: column;
+  background: #CAD2C5;
+  color: #2F3E46;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #2F3E46;
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0.9;
+  font-size: 1.4em;
+  width: 90vw;
+  line-height: 1.3em;
+  z-index: 5;
+  white-space: pre-line;
+  padding: 5%;
+
+  button {
+    background: #CAD2C5;
+    color: #2F3E46;
+    border: 2px solid #2F3E46;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: relative;
+    bottom: 20%;
+    left: 45%;
+  }
+}
+
+.ProjectItem {
+  width: 100vw;
+  justify-content: space-between;
+}
+
+.ProjectItem, .About {
+  display: flex;
+  margin: 5vw;
+  height: 60vh;
+  scroll-snap-align: center;
+
+  img {
+    border-radius: 10px;
+  }
+
+  .MobileMain {
+    max-width: 220px;
+    align-self: center;
+  }
+
+  .ProjectContent {
+    display: flex;
+    justify-content: space-evenly;
+    width: 81%;
+
+    div {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 90%;
+        align-self: center;
+      }
+      
+      div {
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        color: #CAD2C5;
+
+        a, p {
+          cursor: pointer;
+          text-decoration: none;
+          margin: 0 14px;
+          color: #CAD2C5;
+        }
+
+        a:hover, p:hover {
+          color: #2F3E46;
+        }
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 20%;
+
+    li {
+      display: flex;
+      align-items: center;
+      border-radius: 5;
+      height: 25%;
+
+      img {
+        height: 90%;
+      }
+    }
+  }
+
+  .MobilePreview {
+
+    li {
+      height: 33%;
+      margin: 0 10px;
+    }
+  }
+}
+
+.LeftArrow, .RightArrow {
+  cursor: pointer;
+  position: sticky;
+  height: 12.5%;
+  width: 4%;
+  min-width: 60px;
+  min-height: 60px;
+  margin: 2%;
+  border: 3px solid #CAD2C5;
+  border-radius: 100%;
+
+  div {
+    position: relative;
+    width: 3px;
+    height: 27px;
+    background: #CAD2C5;
+  }
+}
+
+.LeftArrow {
+  top: 40%;
+
+  div {
+    left: 45%;
+  }
+
+  div:first-child {
+    top: 6px;
+    transform: rotate(30deg);
+  }
+
+  div:last-child {
+    transform: rotate(-30deg);
+  }
+}
+
+.RightArrow {
+  top: 40%;
+
+  div {
+    left: 50%;
+  }
+
+  div:first-child {
+    top: 6px;
+    transform: rotate(-30deg);
+  }
+
+  div:last-child {
+    transform: rotate(30deg);
+  }
+}
+
+.Hidden {
+  display: none;
+}
+
+.HiddenArrow {
+  width: 6%;
+  height: 2px;
+}

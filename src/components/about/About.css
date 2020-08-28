@@ -1,5 +1,193 @@
 .About {
   background: #CAD2C5;
-  height: 100vh;
-  width: 100vw;
+  height: 85vh;
+  width: 100%;
+
+  section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  section:nth-of-type(2) {
+    height: 65vh;
+    padding-top: 0;
+    background-image: url('../../../public/assets/camping.jpg');
+
+    div:last-child {
+      margin-left: 15%;
+      width: 70%;
+      white-space: pre-wrap;
+      position: relative;
+      bottom: 60%;
+      text-align: center;
+
+      p {
+        line-height: 1.6em;
+        text-align-last: end;
+        font-size: 2em;
+        color: #2F3E46;
+        
+        span {
+          color: white;
+          font-size: 0.7em;
+        }
+      }
+    }
+  }
+
+  section:last-child {
+    box-shadow: 0 5px 15px #2F3E46;
+    height: 75vh;
+    background-image: url('../../../public/assets/Croatia.jpg');
+
+    div:last-child {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      position: relative;
+      bottom: 80%;
+
+      img {
+        border: 10px solid #2F3E46;
+        border-radius: 100%;
+        width: 25%;
+      }
+    }
+  }
+}
+
+.Mask, .LastMask {
+  height: 100%;
+  width: 100%;
+  background-color: #CAD2C5;
+  opacity: 0.6;
+}
+
+.LastMask {
+  background-color: #ebf1e8;
+}
+
+.Img1 {
+  height: 85vh;
+  padding-top: 15vh;
+  background-image: url('../../../public/assets/bosnia.jpg');
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .Divs {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    bottom: 95%;
+    width: 97%;
+    text-align: end;
+    color: rgb(30, 56, 49);
+    font-size: 40px;
+    opacity: 1;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 10%;
+      height: 7%;
+      margin: 0.8% 0.2%;
+
+      img {
+        height: 50%;
+        width: 50%;
+        margin: 1%;
+        filter: drop-shadow(5px 5px 5px #2F3E46);
+      }
+
+      p {
+        text-align: center;
+        font-size: 0.35em;
+        margin: 10%;
+      }
+    }
+  }
+
+  .Round {
+    position: relative;
+    border: 3px solid #ebf1e8;
+    left: 50%;
+    bottom: 100%;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+      
+    span {
+      height: 3px;
+      width: 23px;
+      background: #ebf1e8;
+      transition: 0.4s ease;
+    }
+    
+    span:first-child {
+      position: absolute;
+      transform: rotate(45deg);
+      left: 23%;
+      bottom: 35%;
+    }
+      
+    span:nth-child(2) {
+      position: absolute;
+      transform: rotate(-45deg);
+      left: 44%;
+      bottom: 35%;
+    }
+    
+    span:nth-child(3) {
+      position: absolute;
+      transform: rotate(45deg);
+      left: 23%;
+      bottom: 54%;
+    }
+      
+    span:nth-child(4) {
+      position: absolute;
+      transform: rotate(-45deg);
+      left: 44%;
+      bottom: 54%;
+    }
+  }
+}
+
+.Info {
+  height: 40vh;
+  padding: 80px 15%;
+  display: flex;
+  align-items: center;
+  background: #CAD2C5;
+  color: #2F3E46;
+  line-height: 2.5em;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.Round:hover {
+  span:nth-child(1) {
+    transform: rotate(-135deg);
+  }
+
+  span:nth-child(2) {
+    transform: rotate(135deg);
+  }
+
+  span:nth-child(3) {
+    transform: rotate(225deg);
+  }
+
+  span:nth-child(4) {
+    transform: rotate(-225deg);
+  }
 }

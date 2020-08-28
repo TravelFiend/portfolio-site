@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Contact.css';
-import githubIcon from '../../assets/github-icon.png';
-import linkedInIcon from '../../assets/linkedin-icon.png';
-import instaIcon from '../../assets/insta-icon.png';
-import emailIcon from '../../assets/email-icon.png';
+import githubIcon from '../../../public/assets/github-icon.png';
+import linkedInIcon from '../../../public/assets/linkedin-icon.png';
+import instaIcon from '../../../public/assets/insta-icon.png';
+import emailIcon from '../../../public/assets/email-icon.png';
 
 const Contact = () => (
   <section className={styles.Contact}>
