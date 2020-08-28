@@ -7,7 +7,7 @@ const Projects = () => {
   const refs = useRef(projectPicList.map(() => createRef()));
 
   const navButtons = projectPicList.map((item, i) => (
-    <a key={item.projectName} onClick={() => {
+    <p key={item.projectName} onClick={() => {
       refs.current[i].current.scrollIntoView({
         behavior: 'smooth',
         block: 'center'
@@ -16,12 +16,12 @@ const Projects = () => {
       <li>
         <span>{item.projectName}</span>
       </li>
-    </a>
+    </p>
   ));
 
   const projectItems = projectPicList.map((project, j) => (
-    <li key={j} ref={refs.current[j]} id={j}>
-      <ProjectItem site={project.liveLink} code={project.repoLink} about={project.about} projectName={project.projectName} mobile={project.mobile} imageList={project.imageList} />
+    <li key={j} ref={refs.current[j]}>
+      <ProjectItem ref={{ ref1: refs.current[j - 1], ref2: refs.current[j + 1] }} site={project.liveLink} code={project.repoLink} about={project.about} projectName={project.projectName} mobile={project.mobile} imageList={project.imageList} />
     </li>
   ));
 

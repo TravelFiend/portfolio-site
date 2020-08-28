@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, forwardRef } from 'react';
 import styles from './ProjectItem.css';
 import PropTypes from 'prop-types';
 
-const ProjectItem = ({ site, code, projectName, about, mobile, imageList }) => {
+const ProjectItem = forwardRef(({ site, code, projectName, about, mobile, imageList }, { ref1, ref2 }) => {
   const [imgIndex, setImgIndex] = useState(0);
   const [showAbout, setShowAbout] = useState(false);
-  const ref = useRef();
+  const aboutRef = useRef();
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClick);
@@ -15,11 +15,25 @@ const ProjectItem = ({ site, code, projectName, about, mobile, imageList }) => {
   }, []);
 
   const handleClick = ({ target }) => {
-    if(ref.current.contains(target)) {
+    if(aboutRef.current.contains(target)) {
       return;
     }
     // outside click 
     return setShowAbout(false);
+  };
+
+  const handlePrevClick = () => {
+    ref1.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  };
+
+  const handleNextClick = () => {
+    ref2.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
   };
 
   const snapshots = imageList.map((onePic, i) => (
@@ -30,12 +44,12 @@ const ProjectItem = ({ site, code, projectName, about, mobile, imageList }) => {
 
   return (
     <>
-      {showAbout && <div className={styles.About} ref={ref}>
+      {showAbout && <div className={styles.About} ref={aboutRef}>
         <button onClick={() => setShowAbout(false)}>Close</button>
         {about}
       </div>}
       <section className={!showAbout ? styles.ProjectItem : styles.Hidden}>
-        <div className={!mobile ? styles.LeftArrow : styles.HiddenArrow}>
+        <div className={!mobile ? styles.LeftArrow : styles.HiddenArrow} onClick={handlePrevClick}>
           <div></div>
           <div></div>
         </div>
@@ -55,14 +69,16 @@ const ProjectItem = ({ site, code, projectName, about, mobile, imageList }) => {
           <ul className={mobile ? styles.MobilePreview : undefined}>{snapshots}</ul>
         </div>
         
-        <div className={projectName !== 'Offbeat' ? styles.RightArrow : styles.HiddenArrow}>
+        <div className={projectName !== 'Offbeat' ? styles.RightArrow : styles.HiddenArrow} onClick={handleNextClick} >
           <div></div>
           <div></div>
         </div>
       </section>
     </>
   );
-};
+});
+
+ProjectItem.displayName = 'ProjectItem';
 
 ProjectItem.propTypes = {
   site: PropTypes.string.isRequired,
