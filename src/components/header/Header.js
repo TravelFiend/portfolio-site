@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styles from './Header.css';
 import MGLogo from '../../../public/assets/MGLogo.png';
 import MGColorResume from '../../../public/assets/MGColorResume.pdf';
@@ -8,21 +8,21 @@ const Header = () => (
   <header className={styles.Header}>
     <img src={MGLogo} />
     <nav>
-      <Link to='/'>
-        <span>Home</span>
-      </Link>
+      <NavLink exact to='/' activeClassName={styles.selected}>
+        Home
+      </NavLink>
 
-      <Link to='/about'>
-        <span>About</span>
-      </Link>
+      <NavLink to='/about' activeClassName={styles.selected}>
+        About
+      </NavLink>
 
-      <Link to='/projects'>
-        <span>Work</span>
-      </Link>
+      <NavLink to='/projects' activeClassName={styles.selected}>
+        Work
+      </NavLink>
 
-      <Link to='/contact'>
-        <span>Contact</span>
-      </Link>
+      <NavLink to='/contact' activeClassName={styles.selected}>
+        Contact
+      </NavLink>
 
       <a href={MGColorResume} target='_blank' rel='noopener noreferrer'>Printable Resume</a>
     </nav>

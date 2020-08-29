@@ -13,24 +13,22 @@
     text-transform: uppercase;
     margin-right: 5vw;
     text-decoration: none;
-  }
-
-  a:visited {
     color: #CAD2C5;
-  }
-
-  span, a {
     font-size: 18px;
     transition-property: color;
     transition-duration: 0.3s;
   }
 
-  span:hover, a:hover {
+  a:hover {
     color: #84A98C;
   }
 
   img {
     height: 80%;
     margin-left: 3%;
+  }
+
+  .selected {
+    color: #84A98C;
   }
 }

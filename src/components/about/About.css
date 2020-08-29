@@ -117,6 +117,7 @@
   }
 
   .Round {
+    cursor: pointer;
     position: relative;
     border: 3px solid #ebf1e8;
     left: 50%;
