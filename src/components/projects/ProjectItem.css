@@ -36,7 +36,7 @@
 
 .ProjectItem, .About {
   display: flex;
-  margin: 5vw;
+  margin: 3vw 5vw 7vw 5vw;
   height: 60vh;
   scroll-snap-align: center;
 
@@ -45,7 +45,7 @@
   }
 
   .MobileMain {
-    max-width: 220px;
+    height: 81%;
     align-self: center;
   }
 
@@ -59,14 +59,16 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      height: 100%;
 
       img {
-        width: 90%;
         align-self: center;
+        max-height: 85%;
+        max-width: 80%;
       }
       
       div {
-        margin-bottom: 25px;
+        margin-bottom: 1.5vh;
         display: flex;
         flex-direction: row;
         justify-content: center;
