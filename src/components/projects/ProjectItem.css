@@ -18,6 +18,7 @@
   padding: 5%;
 
   button {
+    cursor: pointer;
     background: #CAD2C5;
     color: #2F3E46;
     border: 2px solid #2F3E46;

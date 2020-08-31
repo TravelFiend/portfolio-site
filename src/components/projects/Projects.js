@@ -1,4 +1,4 @@
-import React, { useRef, createRef } from 'react';
+import React, { useRef, createRef, useState } from 'react';
 import styles from './Projects.css';
 import ProjectItem from './ProjectItem';
 import projectPicList from '../../data/projectPicList';
@@ -7,16 +7,14 @@ const Projects = () => {
   const refs = useRef(projectPicList.map(() => createRef()));
 
   const navButtons = projectPicList.map((item, i) => (
-    <p key={item.projectName} onClick={() => {
+    <li key={item.projectName} onClick={() => {
       refs.current[i].current.scrollIntoView({
         behavior: 'smooth',
         block: 'center'
       });
     }}>
-      <li>
-        <span>{item.projectName}</span>
-      </li>
-    </p>
+      {item.projectName}
+    </li>
   ));
 
   const projectItems = projectPicList.map((project, j) => (
