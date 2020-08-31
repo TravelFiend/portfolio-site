@@ -1,4 +1,4 @@
-import React, { useRef, createRef } from 'react';
+import React, { useRef, createRef, useState } from 'react';
 import styles from './Projects.css';
 import ProjectItem from './ProjectItem';
 import projectPicList from '../../data/projectPicList';
