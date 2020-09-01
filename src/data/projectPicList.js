@@ -51,7 +51,7 @@ const projectPics = [
     mobile: false,
     about: `HTML - CSS - Vanilla JavaScript - MongoDB - Mongoose - Express - Jest - Node.js
     
-    A cover letter generator aimed towards softare developers!  The user is asked to enter answers for a series of basic questions.  Those answers are then used to create over a million unique cover letters and return the version with the highest sentiment score.  This project was completed with a group of 4 developers in a single week.  I had a heavy hand in both the front-end and backend, helping build not only the basic structure of the app, but also with static/instance methods used to generate the cover letters as well as the regex needed to replace keys with user answers.`,
+    A cover letter generator aimed towards software developers!  The user is asked to enter answers for a series of basic questions.  Those answers are then used to create over a million unique cover letters and return the version with the highest sentiment score.  This project was completed with a group of 4 developers in a single week.  I had a heavy hand in both the front-end and backend, helping build not only the basic structure of the app, but also with static/instance methods used to generate the cover letters as well as the regex needed to replace keys with user answers.`,
     imageList: [covrLogin, covrForm, covrLetter, covrAbout]
   }, {
     projectName: 'KIT (Keep In Touch)',

@@ -29,14 +29,10 @@ const About = () => {
   const ref = useRef();
   const { width } = useDimensions();
 
-  useEffect(() => {
-    console.log(width);
-  }, [width]);
-
   const handleClick = () => {
     ref.current.scrollIntoView({
       behavior: 'smooth',
-      block: 'center'
+      block: 'start'
     });
   };
 

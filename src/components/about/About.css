@@ -110,6 +110,24 @@
         bottom: 54%;
       }
     }
+
+    .Round:hover {
+      span:nth-child(1) {
+        transform: rotate(-135deg);
+      }
+      
+      span:nth-child(2) {
+        transform: rotate(135deg);
+      }
+      
+      span:nth-child(3) {
+        transform: rotate(225deg);
+      }
+      
+      span:nth-child(4) {
+        transform: rotate(-225deg);
+      }
+    }
   }
 
   section:nth-of-type(2) {
@@ -169,24 +187,6 @@
 
 .LastMask {
   background-color: #ebf1e8;
-}
-
-.Round:hover {
-  span:nth-child(1) {
-    transform: rotate(-135deg);
-  }
-  
-  span:nth-child(2) {
-    transform: rotate(135deg);
-  }
-  
-  span:nth-child(3) {
-    transform: rotate(225deg);
-  }
-  
-  span:nth-child(4) {
-    transform: rotate(-225deg);
-  }
 }
 
 .Info {
@@ -269,7 +269,7 @@
 
       .Round {
         bottom: 96%;
-        left: 40%;
+        left: 44%;
       }
     }
   }
@@ -281,6 +281,13 @@
   }
 
   .About{
+    section:first-child {
+      .Round {
+        bottom: 102%;
+        left: 40%;
+      }
+    }
+
     section:nth-of-type(2) {
 
       div:last-child {
