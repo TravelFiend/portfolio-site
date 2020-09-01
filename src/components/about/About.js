@@ -1,6 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styles from './About.css';
 import halfCover from '../../../public/assets/half.png';
+import fullCover from '../../../public/assets/full.png';
+import bosnia from '../../../public/assets/bosnia.jpg';
+import bosniaHalf from '../../../public/assets/bosniaHalf.jpg';
 import html from '../../../public/assets/html5.png';
 import css from '../../../public/assets/css3.png';
 import js from '../../../public/assets/js.png';
@@ -20,9 +23,15 @@ import skydiving from '../../../public/assets/skydiving.jpg';
 import beers from '../../../public/assets/beers.jpg';
 import bees from '../../../public/assets/bees.jpg';
 import TravisCI from '../../../public/assets/TravisCI.png';
+import useDimensions from '../../hooks/dimensions';
 
 const About = () => {
   const ref = useRef();
+  const { width } = useDimensions();
+
+  useEffect(() => {
+    console.log(width);
+  }, [width]);
 
   const handleClick = () => {
     ref.current.scrollIntoView({
@@ -40,8 +49,8 @@ const About = () => {
 
   return (
     <article className={styles.About}>
-      <section className={styles.Img1}>
-        <img src={halfCover} />
+      <section style={{ backgroundImage: width > 740 ? `url(${bosnia})` : `url(${bosniaHalf})` }}>
+        <img src={width > 740 ? halfCover : fullCover} />
         <div className={styles.Divs}>
           {icon(html, 'HTML5')}
           {icon(css, 'CSS')}
@@ -52,7 +61,7 @@ const About = () => {
 
         <div className={styles.Divs}>
           <div>
-            <img style={{ width: '96%' }} src={node} />
+            <img className={styles.Wide} src={node} />
             <p>nodeJS</p>
           </div>
           {icon(react, 'React / Native')}
@@ -69,12 +78,12 @@ const About = () => {
 
         <div className={styles.Divs}>
           <div>
-            <img style={{ width: '87%' }} src={express} />
+            <img className={styles.Wide} src={express} />
             <p>Express</p>
           </div>
           {icon(mongodb, 'MongoDB')}
           <div>
-            <img style={{ width: '100%' }} src={mongoose} />
+            <img className={styles.Wider} src={mongoose} />
             <p>mongoose</p>
           </div>
         </div>
