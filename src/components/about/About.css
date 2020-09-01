@@ -163,32 +163,53 @@
   }
 }
 
+
+.Round:hover {
+  span:nth-child(1) {
+    transform: rotate(-135deg);
+  }
+  
+  span:nth-child(2) {
+    transform: rotate(135deg);
+  }
+  
+  span:nth-child(3) {
+    transform: rotate(225deg);
+  }
+  
+  span:nth-child(4) {
+    transform: rotate(-225deg);
+  }
+}
+
 .Info {
   height: 40vh;
   padding: 80px 15%;
   display: flex;
   align-items: center;
-  background: #CAD2C5;
+  background-color: #CAD2C5;
   color: #2F3E46;
   line-height: 2.5em;
   font-size: 1.2em;
   text-align: center;
 }
 
-.Round:hover {
-  span:nth-child(1) {
-    transform: rotate(-135deg);
+@media screen and (max-width: 905px) {
+  .Info {
+    height: 80vh;
+    padding: 80px 5%;
   }
 
-  span:nth-child(2) {
-    transform: rotate(135deg);
-  }
+  .About{
+    section:nth-of-type(2) {
 
-  span:nth-child(3) {
-    transform: rotate(225deg);
-  }
+      div:last-child {
+        bottom: 70%;
 
-  span:nth-child(4) {
-    transform: rotate(-225deg);
+        p {
+          line-height: 1.2em;
+        }
+      }
+    }
   }
 }
