@@ -1,10 +1,16 @@
-import React, { useRef, createRef, useState } from 'react';
+import React, { useRef, createRef, useState, useEffect } from 'react';
 import styles from './Projects.css';
 import ProjectItem from './ProjectItem';
 import projectPicList from '../../data/projectPicList';
 
 const Projects = () => {
   const refs = useRef(projectPicList.map(() => createRef()));
+  const listRef = useRef();
+  const [percentageScrolled, setPercentageScrolled] = useState(0);
+
+  useEffect(() => {
+    console.log(percentageScrolled);
+  }, [percentageScrolled]);
 
   const navButtons = projectPicList.map((item, i) => (
     <li key={item.projectName} onClick={() => {
@@ -12,6 +18,7 @@ const Projects = () => {
         behavior: 'smooth',
         block: 'center'
       });
+      setPercentageScrolled(listRef.current.scrollLeft / listRef.current.scrollWidth);
     }}>
       {item.projectName}
     </li>
@@ -30,7 +37,7 @@ const Projects = () => {
           {navButtons}
         </ul>
 
-        <ul className={styles.SecondList}>
+        <ul className={styles.SecondList} ref={listRef}>
           {projectItems}
         </ul>
       </div>

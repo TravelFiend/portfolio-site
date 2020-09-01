@@ -17,9 +17,9 @@ const Contact = () => (
     <div></div>
 
     <section className={styles.Links}>
-      <a href="https://github.com/TravelFiend">/TravelFiend</a>
-      <a href="https://www.linkedin.com/in/mikeegrace">/mikeegrace</a>
-      <a href="https://www.instagram.com/mgrizzle24/">@mgrizzle24</a>
+      <a href="https://github.com/TravelFiend" target="_blank">/TravelFiend</a>
+      <a href="https://www.linkedin.com/in/mikeegrace" target="_blank">/mikeegrace</a>
+      <a href="https://www.instagram.com/mgrizzle24/" target="_blank">@mgrizzle24</a>
       <a href="mailto:mikegrace274@gmail.com">mikegrace274@gmail.com</a>
     </section>
   </section>
