@@ -59,9 +59,9 @@ const ProjectItem = forwardRef(({ site, code, projectName, about, mobile, imageL
             <div>
               <p onClick={() => setShowAbout(true)}>About</p>
               ||
-              <a href={site}>{projectName === 'NMConnect' ? 'Apple Store' : 'Check it out'}</a>
+              <a href={site} rel="noreferrer" target="_blank">{projectName === 'NMConnect' ? 'Apple Store' : 'Check it out'}</a>
               ||
-              <a href={code}>{projectName === 'NMConnect' ? 'Google Play Store' : 'See the code'}</a>
+              <a href={code} rel="noreferrer" target="_blank">{projectName === 'NMConnect' ? 'Google Play Store' : 'See the code'}</a>
             </div>
             <img className={mobile ? styles.MobileMain : undefined} src={imageList[imgIndex]}/>
           </div>
