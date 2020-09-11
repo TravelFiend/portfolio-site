@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Contact.css';
-import githubIcon from '../../../public/assets/github-icon.png';
+import { GithubButton } from '../buttons/Buttons';
 import linkedInIcon from '../../../public/assets/linkedin-icon.png';
 import instaIcon from '../../../public/assets/insta-icon.png';
 import emailIcon from '../../../public/assets/email-icon.png';
@@ -8,7 +8,7 @@ import emailIcon from '../../../public/assets/email-icon.png';
 const Contact = () => (
   <section className={styles.Contact}>
     <section className={styles.Icons}>
-      <img src={githubIcon} />
+      <GithubButton />
       <img src={linkedInIcon} />
       <img src={instaIcon} />
       <img src={emailIcon} />

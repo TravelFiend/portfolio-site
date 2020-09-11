@@ -24,7 +24,8 @@
   height: 85vh;
   padding-top: 15vh;
 
-  img {
+  img, svg {
+    fill: #2F3E46;
     width: 40px;
   }
 }

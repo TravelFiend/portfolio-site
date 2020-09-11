@@ -25,7 +25,7 @@
       justify-content: space-around;
       width: 48px;
 
-      img, .WorkButtons {
+      img, g {
         cursor: pointer;
         width: 85%;
         min-width: 45px;
