@@ -19,7 +19,7 @@ exports[`App component renders App 1`] = `
     />
     <Route
       component={[Function]}
-      path="/projects"
+      path="/work"
     />
     <Route
       component={[Function]}

@@ -18,7 +18,7 @@ const Projects = () => {
         behavior: 'smooth',
         block: 'center'
       });
-      setPercentageScrolled(listRef.current.scrollLeft / listRef.current.scrollWidth);
+      setPercentageScrolled(listRef.current.scrollWidth / listRef.current.scrollLeft);
     }}>
       {item.projectName}
     </li>

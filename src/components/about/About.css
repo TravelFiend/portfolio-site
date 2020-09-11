@@ -2,6 +2,7 @@
   background: #CAD2C5;
   height: 85vh;
   width: 100%;
+  padding-top: 15vh;
 
   section {
     background-attachment: fixed;
@@ -12,7 +13,6 @@
 
   section:first-child {
     height: 85vh;
-    padding-top: 15vh;
 
     img {
       width: 100%;
@@ -23,7 +23,7 @@
       position: relative;
       margin: 0;
       padding: 0;
-      bottom: 95%;
+      bottom: 98%;
       height: 25%;
       width: 97%;
       text-align: end;
@@ -43,14 +43,14 @@
         margin: 0.8% 0.2%;
 
         img {
-          height: 75px;
-          width: 75px;
+          height: 60px;
+          width: 60px;
           margin: 1%;
           filter: drop-shadow(5px 5px 5px #2F3E46);
         }
 
         .Wide {
-          width: 120px;
+          width: 110px;
         }
 
         .Wider {
@@ -172,6 +172,7 @@
       img {
         border: 10px solid #2F3E46;
         border-radius: 100%;
+        height: 50%;
         width: 25%;
       }
     }
@@ -226,7 +227,7 @@
 
 @media screen and (max-width: 905px) {
   .Info {
-    height: 55vh;
+    height: 60vh;
     padding: 80px 7%;
   }
 
@@ -272,6 +273,14 @@
         left: 44%;
       }
     }
+
+    section:last-child {
+      div:last-child {
+        img {
+          border: 6px solid #2F3E46;
+        }
+      }
+    }
   }
 }
 
@@ -281,6 +290,11 @@
   }
 
   .About{
+
+    section {
+      background-attachment: scroll;
+    }
+
     section:first-child {
       .Round {
         bottom: 102%;

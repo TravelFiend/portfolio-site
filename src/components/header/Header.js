@@ -36,7 +36,7 @@ const Header = () => {
           About
         </NavLink>
 
-        <NavLink to='/projects' activeClassName={styles.selected} onClick={() => setIsShown(false)}>
+        <NavLink to='/work' activeClassName={styles.selected} onClick={() => setIsShown(false)}>
           Work
         </NavLink>
 

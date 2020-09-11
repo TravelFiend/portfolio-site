@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './header/Header';
 import Home from './home/Home';
 import About from './about/About';
-import Projects from './projects/Projects';
+import Work from './work/Work';
 import Contact from './contact/Contact';
-import Resume from './resume/ResumePage';
 
 export default function App() {
   return (
@@ -14,8 +13,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/resume" component={Resume} />
-        <Route path="/projects" component={Projects} />
+        <Route path="/work" component={Work} />
         <Route path="/contact" component={Contact} />
       </Switch>
     </Router>

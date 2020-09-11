@@ -16,6 +16,7 @@
   a {
     text-transform: uppercase;
     margin-right: 5vw;
+    padding-bottom: 10px;
     text-decoration: none;
     color: #CAD2C5;
     font-size: 18px;
@@ -29,6 +30,7 @@
 
   .selected {
     color: #84A98C;
+    border-bottom: 2px solid #CAD2C5;
   }
 }
 

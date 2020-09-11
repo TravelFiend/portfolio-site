@@ -5,7 +5,7 @@ const Home = () => (
   <section className={styles.Home}>
     <div>
       <h1>Mike Grace</h1>
-      <h2>Software Developer</h2>
+      <h2>Software Engineer</h2>
     </div>
   </section>
 );

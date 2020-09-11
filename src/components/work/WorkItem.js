@@ -1,11 +1,15 @@
 import React, { useState, useRef, useEffect, forwardRef } from 'react';
-import styles from './ProjectItem.css';
+import styles from './WorkItem.css';
 import PropTypes from 'prop-types';
+import { InfoButton, AppleButton, GoogleButton, GithubButton, WebsiteButton } from '../buttons/Buttons';
+import useDimensions from '../../hooks/dimensions';
 
-const ProjectItem = forwardRef(({ site, code, projectName, about, mobile, imageList }, { ref1, ref2 }) => {
+
+const WorkItem = forwardRef(({ site, code, projectName, about, mobile, imageList }, { ref1, ref2 }) => {
   const [imgIndex, setImgIndex] = useState(0);
   const [showAbout, setShowAbout] = useState(false);
   const aboutRef = useRef();
+  const { width } = useDimensions();
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClick);
@@ -44,31 +48,33 @@ const ProjectItem = forwardRef(({ site, code, projectName, about, mobile, imageL
 
   return (
     <>
-      {showAbout && <div className={styles.About} ref={aboutRef}>
+      <p className={styles.ProjectName}>{projectName}</p>
+      {showAbout ? <div className={styles.About} ref={aboutRef}>
         <button onClick={() => setShowAbout(false)}>Close</button>
         {about}
-      </div>}
-      <section className={!showAbout ? styles.ProjectItem : styles.Hidden}>
+      </div> : null}
+      <section className={!showAbout ? styles.WorkItem : styles.Hidden}>
         <div className={!mobile ? styles.LeftArrow : styles.HiddenArrow} onClick={handlePrevClick}>
           <div></div>
           <div></div>
         </div>
 
-        <div className={styles.ProjectContent}>
+        <div>
           <div>
-            <div>
-              <p onClick={() => setShowAbout(true)}>About</p>
-              ||
-              <a href={site} rel="noreferrer" target="_blank">{projectName === 'NMConnect' ? 'Apple Store' : 'Check it out'}</a>
-              ||
-              <a href={code} rel="noreferrer" target="_blank">{projectName === 'NMConnect' ? 'Google Play Store' : 'See the code'}</a>
-            </div>
-            <img className={mobile ? styles.MobileMain : undefined} src={imageList[imgIndex]}/>
+            <InfoButton handleClick={() => setShowAbout(true)} />
+            {/* <img onClick={() => setShowAbout(true)} src={info} /> */}
+            <a href={site} rel="noreferrer" target="_blank">{projectName === 'NMConnect' ? <AppleButton /> : <WebsiteButton />}</a>
+            <a href={code} rel="noreferrer" target="_blank">{projectName === 'NMConnect' ? <GoogleButton /> : <GithubButton />}</a>
+            <div></div>
           </div>
 
-          <ul className={mobile ? styles.MobilePreview : undefined}>{snapshots}</ul>
+          <div>
+            <div style={{ backgroundImage: `url(${imageList[imgIndex]})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}></div>
+
+            <ul className={mobile ? styles.MobilePreview : undefined}>{snapshots}</ul>
+          </div>
         </div>
-        
+
         <div className={projectName !== 'Offbeat' ? styles.RightArrow : styles.HiddenArrow} onClick={handleNextClick} >
           <div></div>
           <div></div>
@@ -78,9 +84,9 @@ const ProjectItem = forwardRef(({ site, code, projectName, about, mobile, imageL
   );
 });
 
-ProjectItem.displayName = 'ProjectItem';
+WorkItem.displayName = 'WorkItem';
 
-ProjectItem.propTypes = {
+WorkItem.propTypes = {
   site: PropTypes.string.isRequired,
   code: PropTypes.string.isRequired,
   projectName: PropTypes.string.isRequired,
@@ -89,4 +95,4 @@ ProjectItem.propTypes = {
   imageList: PropTypes.array.isRequired
 };
 
-export default ProjectItem;
+export default WorkItem;

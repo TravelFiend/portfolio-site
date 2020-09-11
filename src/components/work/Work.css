@@ -1,0 +1,13 @@
+.Container {
+  padding-top: 15vh;
+  height: 85vh;
+  background: #52796F;
+
+  .SecondList {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    height: 100%;
+  }
+}

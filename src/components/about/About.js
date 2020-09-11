@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import styles from './About.css';
 import halfCover from '../../../public/assets/half.png';
 import fullCover from '../../../public/assets/full.png';
