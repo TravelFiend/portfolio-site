@@ -42,7 +42,7 @@ const WorkItem = forwardRef(({ site, code, projectName, about, mobile, imageList
 
   const snapshots = imageList.map((onePic, i) => (
     <li key={i}>
-      <img src={onePic} onClick={() => setImgIndex(i)} />
+      <img style={{ opacity: imgIndex === i ? 1 : 0.5 }} src={onePic} onClick={() => setImgIndex(i)} />
     </li>
   ));
 
