@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect, forwardRef } from 'react';
 import styles from './WorkItem.css';
 import PropTypes from 'prop-types';
-import { InfoButton, AppleButton, GoogleButton, GithubButton, WebsiteButton } from '../buttons/Buttons';
 import useDimensions from '../../hooks/dimensions';
+import WorkButtons from '../WorkButtons';
 
 
 const WorkItem = forwardRef(({ site, code, projectName, about, mobile, imageList }, { ref1, ref2 }) => {
@@ -41,41 +41,43 @@ const WorkItem = forwardRef(({ site, code, projectName, about, mobile, imageList
   };
 
   const snapshots = imageList.map((onePic, i) => (
-    <li key={i}>
-      <img style={{ opacity: imgIndex === i ? 1 : 0.5 }} src={onePic} onClick={() => setImgIndex(i)} />
+    <li style={{ opacity: imgIndex === i ? 1 : 0.4 }} key={i}>
+      <img src={onePic} onClick={() => setImgIndex(i)} />
     </li>
   ));
 
   return (
     <>
-      <p className={styles.ProjectName}>{projectName}</p>
+      <div className={styles.ProjectName}>
+        <p>{projectName}</p>
+        {width < 600 ? <div className={styles.burp}>
+          <p onClick={handlePrevClick}>&lt;</p>
+          <p onClick={handleNextClick}>&gt;</p>
+        </div> : null}
+        {width <= 800 ? <WorkButtons site={site} code={code} projectName={projectName} handleClick={() => setShowAbout(true)} /> : null}
+      </div>
+
       {showAbout ? <div className={styles.About} ref={aboutRef}>
         <button onClick={() => setShowAbout(false)}>Close</button>
         {about}
       </div> : null}
       <section className={!showAbout ? styles.WorkItem : styles.Hidden}>
-        <div className={!mobile ? styles.LeftArrow : styles.HiddenArrow} onClick={handlePrevClick}>
+        <div className={!mobile && width > 600 ? styles.LeftArrow : styles.HiddenArrow} onClick={handlePrevClick}>
           <div></div>
           <div></div>
         </div>
 
         <div>
-          <div>
-            <InfoButton handleClick={() => setShowAbout(true)} />
-            {/* <img onClick={() => setShowAbout(true)} src={info} /> */}
-            <a href={site} rel="noreferrer" target="_blank">{projectName === 'NMConnect' ? <AppleButton /> : <WebsiteButton />}</a>
-            <a href={code} rel="noreferrer" target="_blank">{projectName === 'NMConnect' ? <GoogleButton /> : <GithubButton />}</a>
-            <div></div>
-          </div>
+          {width > 800 ? <WorkButtons site={site} code={code} projectName={projectName} handleClick={() => setShowAbout(true)} /> : null}
 
           <div>
             <div style={{ backgroundImage: `url(${imageList[imgIndex]})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}></div>
 
-            <ul className={mobile ? styles.MobilePreview : undefined}>{snapshots}</ul>
+            <ul className={mobile ? styles.MobilePreview : null}>{snapshots}</ul>
           </div>
         </div>
 
-        <div className={projectName !== 'Offbeat' ? styles.RightArrow : styles.HiddenArrow} onClick={handleNextClick} >
+        <div className={projectName !== 'Offbeat' && width > 600 ? styles.RightArrow : styles.HiddenArrow} onClick={handleNextClick} >
           <div></div>
           <div></div>
         </div>

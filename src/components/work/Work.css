@@ -5,7 +5,6 @@
 
   .SecondList {
     display: flex;
-    overflow-y: hidden;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     height: 100%;

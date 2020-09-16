@@ -1,11 +1,89 @@
-.ProjectName {
-  height: 10%;
+.About {
+  display: flex;
+  flex-direction: column;
+  background: #CAD2C5;
+  color: #2F3E46;
+  box-sizing: border-box;
+  margin: 6% 5vw 0 5vw;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #2F3E46;
+  border-radius: 10px;
   text-align: center;
-  color: #CAD2C5;
-  font-size: 2em;
-  line-height: 200%;
-  text-decoration: underline;
-  text-decoration-color: #2F3E46;
+  opacity: 0.9;
+  font-size: 1.4em;
+  width: 90vw;
+  height: 60vh;
+  line-height: 1.3em;
+  z-index: 5;
+  white-space: pre-line;
+  padding: 9% 5%;
+  scroll-snap-align: center;
+
+  button {
+    cursor: pointer;
+    background: #CAD2C5;
+    color: #2F3E46;
+    border: 2px solid #2F3E46;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: relative;
+    bottom: 20%;
+    left: 40%;
+  }
+}
+
+.ProjectName {
+  width: 100%;
+
+  p {
+    height: 10%;
+    text-align: center;
+    color: #CAD2C5;
+    font-size: 2em;
+    line-height: 200%;
+    text-decoration: underline;
+    text-decoration-color: #2F3E46;
+  }
+
+  .burp {
+    display: flex;
+    justify-content: center;
+
+    p {
+      cursor: pointer;
+      background: #2F3E46;
+      width: 30%;
+      margin: 2% 6% 4% 6%;
+      border: 2px solid #cad2c5;
+      border-radius: 10px;
+      font-size: 1em;
+    }
+  }
+
+  div:last-child {
+    width: 100%;
+    display: flex;
+    height: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+
+    svg, a {
+      height: 100%;
+
+      g {
+        cursor: pointer;
+        width: 5%;
+        max-width: 45px;
+        pointer-events: bounding-box;
+        fill: #2F3E46;
+      }
+      g:hover {
+        opacity: 1;
+        fill: #CAD2C5;
+      }
+    }
+  }
 }
 
 .WorkItem {
@@ -16,7 +94,8 @@
 
   div:nth-child(2) {
     display: flex;
-    width: 88%;
+    margin-left: 3%;
+    width: 85%;
     height: 95%;
 
     div:first-child {
@@ -25,13 +104,10 @@
       justify-content: space-around;
       width: 48px;
 
-      img, g {
+      g {
         cursor: pointer;
         width: 85%;
         min-width: 45px;
-      }
-
-      g {
         pointer-events: bounding-box;
         fill: #2F3E46;
       }
@@ -83,23 +159,22 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 23%;
+          width: 46%;
           margin: 0 1%;
         }
       }
     }
   }
 
-
-
-
-
-
   .LeftArrow, .RightArrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     cursor: pointer;
     position: sticky;
     height: 9%;
     width: 62px;
+    top: 40%;
     margin: 2%;
   
     div {
@@ -118,10 +193,9 @@
   }
   
   .LeftArrow {
-    top: 40%;
   
     div {
-      left: 45%;
+      left: 5%;
     }
   
     div:first-child {
@@ -135,10 +209,9 @@
   }
   
   .RightArrow {
-    top: 40%;
   
     div {
-      left: 50%;
+      left: 15%;
     }
   
     div:first-child {
@@ -159,4 +232,105 @@
 .HiddenArrow {
   width: 6%;
   height: 2px;
+}
+
+@media screen and (max-width: 1040px){
+  .About {
+
+    button {
+      bottom: 12%;
+    }
+  }
+}
+
+@media screen and (max-width: 932px){
+  .About {
+
+    button {
+      bottom: 8%;
+    }
+  }
+}
+
+@media screen and (max-width: 832px){
+  .About {
+    font-size: 1em;
+
+    button {
+      bottom: 6%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px){
+  .About {
+
+    button {
+      bottom: 6%;
+    }
+  }
+
+  .WorkItem {
+    div:nth-of-type(2){
+      margin-left: 1.5%;
+
+      div:last-child {
+        margin-top: 4%;
+        justify-content: start;
+
+        div {
+          height: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 570px){
+  .About {
+
+    button {
+      bottom: 5%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px){
+  .About {
+
+    button {
+      bottom: 1%;
+    }
+  }
+
+  .ProjectName {
+
+    p {
+      font-size: 1.6em;
+    }
+  }
+
+  .WorkItem {
+    div:nth-of-type(2){
+      div:last-child {
+        .MobilePreview {
+          flex-wrap: unset;
+        }
+
+        ul {
+          flex-wrap: wrap;
+
+          li {
+            width: 46%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px){
+  .About {
+    font-size: 0.9em;
+  }
 }

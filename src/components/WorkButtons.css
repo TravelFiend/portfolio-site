@@ -1,0 +1,25 @@
+.Buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 48px;
+
+  img, g {
+    cursor: pointer;
+    width: 85%;
+    max-width: 45px;
+  }
+
+  g {
+    pointer-events: bounding-box;
+    fill: #2F3E46;
+  }
+  g:hover {
+    opacity: 1;
+    fill: #CAD2C5;
+  }
+
+  div {
+    height: 25%
+  }
+}
