@@ -15,10 +15,6 @@ exports[`App component renders App 1`] = `
     />
     <Route
       component={[Function]}
-      path="/resume"
-    />
-    <Route
-      component={[Function]}
       path="/work"
     />
     <Route
