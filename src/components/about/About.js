@@ -38,7 +38,7 @@ const About = () => {
 
   const icon = (image, techName) => (
     <div>
-      <img src={image} />
+      <img src={image} alt={`${techName} icon`} />
       <p>{techName}</p>
     </div>
   );
@@ -46,7 +46,7 @@ const About = () => {
   return (
     <article className={styles.About}>
       <section style={{ backgroundImage: width > 740 ? `url(${bosnia})` : `url(${bosniaHalf})` }}>
-        <img src={width > 740 ? halfCover : fullCover} />
+        <img src={width > 740 ? halfCover : fullCover} alt="Mike in Bosnia" />
         <div className={styles.Divs}>
           {icon(html, 'HTML5')}
           {icon(css, 'CSS')}
@@ -57,7 +57,7 @@ const About = () => {
 
         <div className={styles.Divs}>
           <div>
-            <img className={styles.Wide} src={node} />
+            <img className={styles.Wide} src={node} alt="Node Icon" />
             <p>nodeJS</p>
           </div>
           {icon(react, 'React / Native')}
@@ -74,12 +74,12 @@ const About = () => {
 
         <div className={styles.Divs}>
           <div>
-            <img className={styles.Wide} src={express} />
+            <img className={styles.Wide} src={express} alt="Express Icon" />
             <p>Express</p>
           </div>
           {icon(mongodb, 'MongoDB')}
           <div>
-            <img className={styles.Wider} src={mongoose} />
+            <img className={styles.Wider} src={mongoose} alt="Mongoose Icon" />
             <p>mongoose</p>
           </div>
         </div>
@@ -108,9 +108,9 @@ const About = () => {
       <section>
         <div className={styles.LastMask}></div>
         <div className={styles.ImageText}>
-          <img src={bees}/>
-          <img src={skydiving}/>
-          <img src={beers}/>
+          <img src={bees}alt="Mike holding bees" />
+          <img src={skydiving}alt="Mike skydiving" />
+          <img src={beers}alt="Mike and beers" />
         </div>
       </section>
     </article>

@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <header className={styles.Header}>
-      <img src={MGLogo} />
+      <img src={MGLogo} alt="Mike's Logo" />
 
       <nav className={!isShown ? null : styles.navActive} ref={navLinks}>
         <NavLink exact to='/' activeClassName={styles.selected} onClick={() => setIsShown(false)}>
