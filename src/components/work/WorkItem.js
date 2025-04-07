@@ -51,8 +51,8 @@ const WorkItem = forwardRef(({ site, code, projectName, about, mobile, imageList
       <div className={styles.ProjectName}>
         <p>{projectName}</p>
         {width < 600 ? <div className={styles.burp}>
-          <p onClick={handlePrevClick}>&lt;</p>
-          <p onClick={handleNextClick}>&gt;</p>
+          <p style={{ opacity: mobile ? 0.4 : 1 }} onClick={handlePrevClick}>&lt;</p>
+          <p style={{ opacity: projectName === 'Offbeat' ? 0.4 : 1 }} onClick={handleNextClick}>&gt;</p>
         </div> : null}
         {width <= 800 ? <WorkButtons site={site} code={code} projectName={projectName} handleClick={() => setShowAbout(true)} /> : null}
       </div>
