@@ -32,7 +32,6 @@
     "react-router-dom": "^5.2.0",
     "react-to-print": "^2.12.6",
     "react-visibility-sensor": "^5.1.1"
-
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",
